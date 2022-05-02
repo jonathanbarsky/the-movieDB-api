@@ -1,0 +1,19 @@
+{
+  "name": "the-moviedb-api",
+  "version": "1.0.0",
+  "description": "the-movieDB-api es una single page application a partir la api de the movieDB",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanbarsky/the-movieDB-api.git"
+  },
+  "author": "Jonatham Barsky <barskyjonathan96@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonathanbarsky/the-movieDB-api/issues"
+  },
+  "homepage": "https://github.com/jonathanbarsky/the-movieDB-api#readme"
+}
