@@ -50,8 +50,8 @@ async function getCategoriesPreview() {
 
     });
 }
-getTrendingMoviesPreview();
-getCategoriesPreview();
+// getTrendingMoviesPreview(); ahora estas funciones llas llamo desde una funcion en navigation... o sea solo donde cuando estamos en la pagina donde se pueden invocar
+// getCategoriesPreview();
 
 // {0- creo la funcion asincrona getCategoriesPreview
 // 1- llamo a la api 
