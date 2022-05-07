@@ -94,3 +94,20 @@ async function getMoviesByCategory(id) {
 // 8- agrego la imagen dentro del contenedor de imagenes y ese contenedor lo pongo en la parte de tendencias
 
 // https://image.tmdb.org/t/p/w300${movie.poster_path}
+
+async function getMoviesBySearch(query){
+    const { data } = await api('search/movie',  {
+        params: {
+            query,
+        },
+    });
+    const movies = data.results;
+    createMovies(movies, genericSection);
+}
+async function getTrendingMovies() {
+    const { data } = await api(`trending/movie/day`);
+    const movies = data.results;
+
+    createMovies(movies, genericSection);
+
+}

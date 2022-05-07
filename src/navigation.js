@@ -1,11 +1,13 @@
 searchFormBtn.addEventListener('click', () => {
-    location.hash = '#search=';
+    location.hash = `#search=${searchFormInput.value}`;
 })
 trendingBtn.addEventListener('click', () => {
     location.hash = '#trends';
 })
 arrowBtn.addEventListener('click', () => {
-    location.hash = '#home';
+    //esto es para volver atras en el historial al tocar la flecha
+    //reto hacer que si vuy de otra pagin"platzi por ejemplo"a una url de una categorya..hacer que la flecha de atras nos devuleva al home y no a la pagina de platzi 
+    location.hash = window.history.back();;
 })
 window.addEventListener('DOMContentLoaded', navigator, false);
 window.addEventListener('hashchange', navigator, false);
@@ -44,6 +46,10 @@ function trendsPage() {
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+
+    headerCategoryTitle.innerText = `Tendencias`;
+
+    getTrendingMovies();
 }
 function searchPage() {
     console.log('SEARCH page!');
@@ -53,13 +59,17 @@ function searchPage() {
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
     headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.remove('inactive');
+    headerCategoryTitle.classList.add('inactive');
     searchForm.classList.remove('inactive');
 
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+
+    // {'#search', 'buscador'}
+    const [_, query] = location.hash.split('=') ;
+    getMoviesBySearch(query);
 }
 function movieDetailsPagePage() {
     console.log('MOVIESS!');
