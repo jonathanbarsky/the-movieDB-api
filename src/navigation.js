@@ -24,7 +24,8 @@ function navigator() {
     } else {
          homePage();
      }
-
+     document.body.scrollTop = 0;
+     document.documentElement.scrollTop = 0;
 }
 
 
@@ -88,11 +89,18 @@ function categoriesPage() {
     searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
-    categoriesPreviewSection.classList.add('incative');
+    categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
     
+    // {'#category', 'id-name'}
+    const [_, categoryData] = location.hash.split('=') ;
+    const [categoryId, categoryName] = categoryData.split('-');
+    //tiene que ser un array en este caso para funcionar...no confundir con objeto
+    
+    headerCategoryTitle.innerText = `${categoryName}`
 
+    getMoviesByCategory(categoryId);
 }
 function homePage() {
     console.log('Home');
