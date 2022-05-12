@@ -125,10 +125,23 @@ async function getMovieById(id) {
             ),
         url(${movieImgUrl})
         `;
+    headerSection.style.backgroundPosition = 'center';
+    headerSection.style.backgroundRepeat = 'no-repeat';
+    headerSection.style.backgroundSize = 'cover';
 
     movieDetailTitle.textContent = movie.title;
     movieDetailDescription.textContent = movie.overview;
     movieDetailScore.textContent = movie.vote_average;
 
-    createCategories(movie.genres, movieDetailCategoriesList)
+    createCategories(movie.genres, movieDetailCategoriesList);
+
+    getRelatedMoviesId(id);
+}
+
+async function getRelatedMoviesId(id) {
+    const { data } = await api(`movie/${id}/similar`);
+    const relatedMovies = data.results;
+
+    createMovies(relatedMovies, relatedMoviesContainer);
+
 }
