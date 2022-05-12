@@ -20,7 +20,7 @@ function navigator() {
     } else if(location.hash.startsWith('#search=')) {
          searchPage();
      } else if (location.hash.startsWith('#movie=')) {
-         movieDetailsPagePage();
+         movieDetailsPage();
      } else if (location.hash.startsWith('#category=')) {
         categoriesPage();
     } else {
@@ -71,7 +71,7 @@ function searchPage() {
     const [_, query] = location.hash.split('=') ;
     getMoviesBySearch(query);
 }
-function movieDetailsPagePage() {
+function movieDetailsPage() {
     console.log('MOVIESS!');
 
     headerSection.classList.add('header_container--long');
@@ -86,6 +86,10 @@ function movieDetailsPagePage() {
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
+
+    //['#movie', 'id']
+    const [_, movieId] = location.hash.split('=') ;
+    getMovieById(movieId);
 }
 function categoriesPage() {
     console.log('categories!');
