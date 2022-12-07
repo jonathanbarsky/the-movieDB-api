@@ -50,7 +50,7 @@ h1, h2, h3 {
     padding: 0;
 }
 h1, h2 {
-    font-size: 24px;
+    font-size: 32px;
     color: var(--purple-light-1);
     font-family: var(--font-family-titles);
     font-weight: var(--font-weight-title1);
@@ -58,7 +58,7 @@ h1, h2 {
     padding: 0;
 }
 h2 {
-    font-size: 18px;
+    font-size: 24px;
     color: var(--purple-light-2);
     font-weight: var(--font-weight-title2);
 }
@@ -244,13 +244,19 @@ button{
   
   /* Categories */
   .categoriesPreview_list, .categories_list{
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
     place-items: center;
   }
   .category_container {
-    width: 100%;
+    width: 140px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
   }
   .category_container--loading{
     background: var(--purple-light-2);
@@ -261,43 +267,12 @@ button{
     animation: loading-skeleton infinite 1.5s;
   }
   .category_title {
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
-  .category_title::before {
-    content: '••••';
-    color: transparent;
-    /* TODO: cambiar color por ID de la categoría */
-    background-color: var(--idColor);
-    border-radius: 8px;
-    margin-right: 8px;
-    width: 8px;
-    height: 8px;
-  }
-  #id28 { --idColor: var(--yellow); }
-  #id12 { --idColor: var(--red); }
-  #id16 { --idColor: var(--green); }
-  #id35 { --idColor: var(--lightBlue); }
-  #id80 { --idColor: var(--darkBlue); }
-  #id99 { --idColor: var(--purple-dark-1); }
-  #id18 { --idColor: var(--purple-medium-1); }
-  #id10751 { --idColor: var(--yellow); }
-  #id14 { --idColor: var(--red); }
-  #id36 { --idColor: var(--green); }
-  #id27 { --idColor: var(--lightBlue); }
-  #id10402 { --idColor: var(--darkBlue); }
-  #id9648 { --idColor: var(--purple-dark-1); }
-  #id10749 { --idColor: var(--purple-medium-1); }
-  #id878 { --idColor: var(--yellow); }
-  #id10770 { --idColor: var(--red); }
-  #id53 { --idColor: var(--green); }
-  #id10752 { --idColor: var(--lightBlue); }
-  #id37 { --idColor: var(--darkBlue); }
-  
   
   /* Generic List (search, trending & category) */
   .genericList_container {
@@ -471,11 +446,11 @@ button{
     display: flex;
     flex-direction: column;
   }
-  button{
+  button, .category_container{
     transform: scale(1);
     transition: transform 0.5 s ease-in-out;
   }
-  button:hover{
+  button:hover, .category_container:hover{
     box-shadow: 0 0 20px var(--purple-light-2);
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
