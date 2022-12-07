@@ -11,6 +11,7 @@ const trendingPreviewMovieList = document.querySelector('.trendingPreview_movieL
 const categoriesPreviewList = document.querySelector('.categoriesPreview_list');
 const movieDetailCategoriesList = document.querySelector('#movieDetail .categories_list');
 const relatedMoviesContainer = document.querySelector('.relatedMovies-scrollContainer');
+const footer = document.querySelector(".footer");
 
 // Elements
 const headerTitle = document.querySelector('.header_title');
