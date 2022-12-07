@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jonathanbarsky/the-movieDB-api.git"
   },
-  "author": "Jonatham Barsky <barskyjonathan96@gmail.com>",
+  "author": "Jonathan Barsky <barskyjonathan96@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jonathanbarsky/the-movieDB-api/issues"
