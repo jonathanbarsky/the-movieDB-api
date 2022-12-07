@@ -10,6 +10,8 @@
     --purple-medium-3: #5C218A;
     --purple-dark-1: #3E0F64;
     --purple-dark-2: #2A0646;
+    --blue-light-1: rgba(4,137,181,1);
+    --grey-light-1: rgb(132,134,136);
   
     --yellow: #EECC75;
     --green: #CAD297;
@@ -28,21 +30,13 @@
 
 html {
     font-size: 62.5%;
-    background-color: var(--purple-medium-3);
+    background-color: var(--blue-light-1);
 }
 body {
-    /* background: rgb(139,72,191);
-    background: radial-gradient(circle, rgba(139,72,191,1) 0%, rgba(138,191,204,1) 100%); */
-    /* background: rgb(139,72,191);
-background: radial-gradient(circle, rgba(139,72,191,1) 0%, rgba(140,155,160,1) 100%); */
-/* background: rgb(88,214,227);
-background: radial-gradient(circle, rgba(88,214,227,1) 0%, rgba(4,137,181,1) 100%); */
-/* background: rgb(88,214,227);
-background: linear-gradient(90deg, rgba(88,214,227,1) 0%, rgba(4,137,181,1) 100%); */
-/* background: rgb(163,88,181);
-background: linear-gradient(60deg, rgba(163,88,181,0.7763480392156863) 0%, rgba(4,137,181,1) 100%); */
-background: rgb(163,88,181);
-background: linear-gradient(180deg, rgba(163,88,181,0.927608543417367) 0%, rgba(4,137,181,0.7511379551820728) 100%);
+    /* background: var(--purple-medium-2);
+    background: linear-gradient(180deg, rgba(163,88,181,0.927608543417367) 0%, rgba(4,137,181,0.7511379551820728) 100%); */
+    background: rgb(132,134,136);
+    background: linear-gradient(140deg, rgba(132,134,136,1) 0%, rgba(4,137,181,0.7511379551820728) 100%);
     color: var(--purple-light-2);
     font-family: var(--font-family-text);
     font-weight: var(--font-weight-text1);
@@ -86,7 +80,9 @@ input::placeholder{
     font-family: var(--font-family-text);
 }
 button{
-    background-color: var(--purple-dark-1);
+    /* background-color: var(--blue-light-1); */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
     border: none;
     color: var(--purple-light-2);
     font-weight: var(--font-weight-text2);
@@ -448,6 +444,15 @@ button{
     display: flex;
     flex-direction: column;
   }
+  button{
+    transform: scale(1);
+    transition: transform 0.5 s ease-in-out;
+  }
+  button:hover{
+    box-shadow: 0 0 20px var(--purple-light-2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
   .header_container--long{
     object-fit: contain;
   }
@@ -456,7 +461,7 @@ button{
     transition: transform 0.8s ease-in-out;
   }
   .movie_container:hover{
-    box-shadow: 0 0 20px var(--purple-dark-1);
+    box-shadow: 0 0 20px var(--purple-light-2);
     transform: scale(1.1);
     transition: transform 0.4s ease-in-out;
   }
