@@ -280,7 +280,7 @@ button{
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     place-items: center;
     gap: 20px;
-    padding: 0 24px;
+    padding: 24px 24px 0;
   }
   .genericList_container .movie_container {
     display: flex;
