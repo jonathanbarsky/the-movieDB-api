@@ -82,6 +82,7 @@ function searchPage() {
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+    footer.classList.remove("inactive");
 
     // {'#search', 'buscador'}
     const [_, query] = location.hash.split('=') ;
@@ -102,6 +103,7 @@ function movieDetailsPage() {
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
+    footer.classList.add("inactive");
 
     //['#movie', 'id']
     const [_, movieId] = location.hash.split('=') ;
@@ -122,6 +124,7 @@ function categoriesPage() {
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+    footer.classList.remove("inactive");
     
     // {'#category', 'id-name'}
     const [_, categoryData] = location.hash.split('=') ;
@@ -147,6 +150,7 @@ function homePage() {
     categoriesPreviewSection.classList.remove('inactive');
     genericSection.classList.add('inactive');
     movieDetailSection.classList.add('inactive');
+    footer.classList.remove("inactive");
 
 
 

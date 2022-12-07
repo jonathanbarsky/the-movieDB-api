@@ -34,7 +34,7 @@ function createMovies(
 
     movies.forEach(movie => {
 
-        const movieContainer = document.createElement('div');
+        const movieContainer = document.createElement('figure');
         movieContainer.classList.add('movie_container');
         movieContainer.addEventListener('click', () => {
             location.hash = '#movie=' + movie.id;  
