@@ -20,7 +20,6 @@ window.addEventListener("scroll", infiniteScroll, {passive: false});
 
 
 function navigator() {
-     console.log({ location });
 
      if(infiniteScroll){
         window.removeEventListener("scroll", infiniteScroll);
@@ -46,9 +45,9 @@ function navigator() {
      }
 }
 function trendsPage() {
-    console.log('TRENDS!');
 
     headerSection.classList.remove('header_container--long');
+    // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
@@ -68,9 +67,9 @@ function trendsPage() {
     infiniteScroll = getPaginatedTrendingMovies;
 }
 function searchPage() {
-    console.log('SEARCH page!');
 
     headerSection.classList.remove('header_container--long');
+    // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
@@ -89,10 +88,10 @@ function searchPage() {
     getMoviesBySearch(query);
 }
 function movieDetailsPage() {
-    console.log('MOVIESS!');
 
     headerSection.classList.add('header_container--long');
-    // headerSection.style.background = '';
+    headerSection.classList.add('opacidad');
+    headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.add('header_arrow--white');
     headerTitle.classList.add('inactive');
@@ -108,11 +107,12 @@ function movieDetailsPage() {
     //['#movie', 'id']
     const [_, movieId] = location.hash.split('=') ;
     getMovieById(movieId);
+    onViewPort.observe(movieDetailSection)
 }
 function categoriesPage() {
-    console.log('categories!');
 
     headerSection.classList.remove('header_container--long');
+    // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
@@ -136,9 +136,9 @@ function categoriesPage() {
     getMoviesByCategory(categoryId);
 }
 function homePage() {
-    console.log('Home');
 
     headerSection.classList.remove('header_container--long');
+    // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.add('inactive');
     arrowBtn.classList.remove('header_arrow--white');

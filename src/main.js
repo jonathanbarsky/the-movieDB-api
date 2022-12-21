@@ -15,7 +15,15 @@ const lazyLoader = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
             const url = entry.target.getAttribute("data-img");
-            entry.target.setAttribute("src", url)
+            entry.target.setAttribute("src", url);
+            entry.target.classList.add("opacidad")
+        }
+    })
+})
+const onViewPort = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("movieDetail_animation")
         }
     })
 })
