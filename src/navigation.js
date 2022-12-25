@@ -46,13 +46,13 @@ function navigator() {
 }
 function trendsPage() {
 
+    headerTitle.classList.add('inactive');
+    headerCategoryTitle.classList.remove('inactive');
     headerSection.classList.remove('header_container--long');
     // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
-    headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.remove('inactive');
     searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
@@ -68,13 +68,13 @@ function trendsPage() {
 }
 function searchPage() {
 
+    headerTitle.classList.add('inactive');
+    headerCategoryTitle.classList.add('inactive');
     headerSection.classList.remove('header_container--long');
-    // headerSection.classList.remove('opacidad');
+    headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
-    headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.add('inactive');
     searchForm.classList.remove('inactive');
 
     trendingPreviewSection.classList.add('inactive');
@@ -89,13 +89,13 @@ function searchPage() {
 }
 function movieDetailsPage() {
 
+    headerTitle.classList.add('inactive');
+    headerCategoryTitle.classList.add('inactive');
     headerSection.classList.add('header_container--long');
-    headerSection.classList.add('opacidad');
+    arrowBtn.classList.add('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.add('header_arrow--white');
-    headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.add('inactive');
     searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
@@ -111,13 +111,14 @@ function movieDetailsPage() {
 }
 function categoriesPage() {
 
+    headerTitle.classList.add('inactive');
+    headerCategoryTitle.classList.remove('inactive');
     headerSection.classList.remove('header_container--long');
-    // headerSection.classList.remove('opacidad');
+    headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
-    headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.remove('inactive');
+    arrowBtn.classList.add("opacidad");
     searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
@@ -138,7 +139,6 @@ function categoriesPage() {
 function homePage() {
 
     headerSection.classList.remove('header_container--long');
-    // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.add('inactive');
     arrowBtn.classList.remove('header_arrow--white');
