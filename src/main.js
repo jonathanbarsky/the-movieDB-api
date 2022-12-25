@@ -33,6 +33,13 @@ const onViewPort = new IntersectionObserver((entries) => {
         }
     })
 }, options)
+const onViewPortCategory = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("category_container-animation")
+        }
+    })
+}, options)
 
 
 function createMovies(
@@ -96,6 +103,7 @@ function createCategories(categories, container) {
 
     categoryTitle.appendChild(categoryTitleText);
     categoryContainer.appendChild(categoryTitle);
+    onViewPortCategory.observe(categoryContainer);
     container.appendChild(categoryContainer);
 
 });
