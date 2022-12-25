@@ -36,7 +36,7 @@ const onViewPort = new IntersectionObserver((entries) => {
 const onViewPortCategory = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
-            entry.target.classList.add("category_container-animation")
+            entry.target.classList.add("opacidad")
         }
     })
 }, options)

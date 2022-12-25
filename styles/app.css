@@ -43,7 +43,6 @@ body {
     font-size: 1.6rem;
     margin: 0 0 0 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -264,11 +263,6 @@ button{
     opacity: 0;
     text-align: center;
   }
-  .category_container-animation{
-    opacity: 0;
-    transform: translateX(100%) forwards;
-    animation: 2s ejeX 0s ease-in-out forwards;
-  }
   .category_container--loading{
     background: var(--purple-light-2);
     border-radius: 8px;
@@ -439,19 +433,6 @@ button{
       transform: scale(1.05);
     }
   }
-  @keyframes ejeX {
-    0%{
-      transform: translateX(100vw);
-      opacity: 0;
-    }
-    10%{
-      opacity: 1;
-    }
-    100%{
-      transform: translateX(0px);
-      opacity: 1;
-    }
-  }  
   
   /* Navigation */
  
@@ -496,11 +477,6 @@ button{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* object-position: center; */
-
-    /* movieImgUrl.style. = 'center';
-    // movieImgUrl.style. = 'no-repeat'; */
-    /* // movieImgUrl.style. = 'cover'; */
   }
   .movie_container{
     transform: scale(1);
