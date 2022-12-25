@@ -20,13 +20,19 @@ const lazyLoader = new IntersectionObserver((entries) => {
         }
     })
 })
+
+let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1
+}
 const onViewPort = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
             entry.target.classList.add("movieDetail_animation")
         }
     })
-})
+}, options)
 
 
 function createMovies(

@@ -115,7 +115,7 @@ button{
     border-radius: 8px;
     min-height: 225px;
     min-width: 100%;
-
+    opacity: 0;
 }
 
 
@@ -535,7 +535,7 @@ button{
   }
 }
 .opacidad{
-  animation: 2s opacidad 0s ease-in forwards;
+  animation: 2s opacidad 0.1s ease-in forwards;
 }
 @keyframes opacidad{
   0%{
