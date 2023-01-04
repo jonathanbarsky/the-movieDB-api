@@ -70,9 +70,9 @@ function createMovies(
         }
         movieImg.addEventListener("error", () => {
             movieImg.classList.add("imageError")
-            movieImg.setAttribute("src", "../images/fondoVioleta.png")
             const movieTitleText = document.createTextNode(movieImg.getAttribute("alt"));
             const movieTitle = document.createElement("span")
+            movieContainer.classList.add("movieError_container")
             movieContainer.appendChild(movieTitle);
             movieTitle.appendChild(movieTitleText);
         })

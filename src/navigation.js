@@ -55,6 +55,7 @@ function trendsPage() {
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
+    arrowBtn.classList.add('opacidad');
 
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');

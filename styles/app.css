@@ -91,7 +91,8 @@ button{
     cursor: pointer;
 }
 .movie_container .imageError{
-  background-color: var(--purple-dark-1);
+  background-color: rgba(255, 255, 255, 0.25);
+  filter: blur(20px);
   width: 100%;
   min-height: 225px;
   height: 100%;
@@ -308,7 +309,10 @@ button{
   }
   .movie_container span{
     position: absolute;
-    color: var(--lightBlue);
+    color: var(--purple-light-2);
+    font-size: 1.8rem;
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-text1);
   }
   
   /* Movie Detail */
@@ -450,8 +454,14 @@ button{
   }
 /*      ARREGLAR */
 @media(min-width:350px){
-  .movie_container .imageError{
-    min-height: 64vw;
+  .movieError_container{
+    min-height: calc(100% - 30px);
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .movie_container > .imageError{
+    min-height: 100%;
     max-height: 100%;
   }
   /*      ARREGLAR */
