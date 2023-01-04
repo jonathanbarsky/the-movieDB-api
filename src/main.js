@@ -14,9 +14,9 @@ const api = axios.create({
 const lazyLoader = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
+            entry.target.classList.add("opacidad")
             const url = entry.target.getAttribute("data-img");
             entry.target.setAttribute("src", url);
-            entry.target.classList.add("opacidad")
         }
     })
 })
@@ -29,18 +29,14 @@ let options = {
 const onViewPort = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
-            entry.target.classList.add("movieDetail_animation")
+            if(entry.target.classList.contains("category_container")){
+                entry.target.classList.add("opacidad")
+            } else{
+                entry.target.classList.add("movieDetail_animation")
+            }
         }
     })
-}, options)
-const onViewPortCategory = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("opacidad")
-        }
-    })
-}, options)
-
+}, options);
 
 function createMovies(
     movies, 
@@ -103,7 +99,7 @@ function createCategories(categories, container) {
 
     categoryTitle.appendChild(categoryTitleText);
     categoryContainer.appendChild(categoryTitle);
-    onViewPortCategory.observe(categoryContainer);
+    onViewPort.observe(categoryContainer);
     container.appendChild(categoryContainer);
 
 });

@@ -12,6 +12,7 @@ trendingBtn.addEventListener('click', () => {
 arrowBtn.addEventListener('click', () => {
     //esto es para volver atras en el historial al tocar la flecha
     //reto hacer que si vuy de otra pagin"platzi por ejemplo"a una url de una categorya..hacer que la flecha de atras nos devuleva al home y no a la pagina de platzi 
+    // headerTitle.classList.add("inactive");
     location.hash = window.history.back();;
 })
 window.addEventListener('DOMContentLoaded', navigator, false);
@@ -49,11 +50,11 @@ function trendsPage() {
     headerTitle.classList.add('inactive');
     headerCategoryTitle.classList.remove('inactive');
     headerSection.classList.remove('header_container--long');
+    searchForm.classList.add('inactive');
     // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
-    searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
@@ -71,11 +72,12 @@ function searchPage() {
     headerTitle.classList.add('inactive');
     headerCategoryTitle.classList.add('inactive');
     headerSection.classList.remove('header_container--long');
-    headerSection.classList.remove('opacidad');
+    searchForm.classList.remove('inactive');
+    // headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
-    searchForm.classList.remove('inactive');
+    arrowBtn.classList.add('opacidad');
 
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
@@ -92,12 +94,12 @@ function movieDetailsPage() {
     headerTitle.classList.add('inactive');
     headerCategoryTitle.classList.add('inactive');
     headerSection.classList.add('header_container--long');
-    arrowBtn.classList.add('opacidad');
+    searchForm.classList.add('inactive');
+
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.add('header_arrow--white');
-    searchForm.classList.add('inactive');
-
+    arrowBtn.classList.add("opacidad")
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.add('inactive');
@@ -113,13 +115,12 @@ function categoriesPage() {
 
     headerTitle.classList.add('inactive');
     headerCategoryTitle.classList.remove('inactive');
+    searchForm.classList.add('inactive');
     headerSection.classList.remove('header_container--long');
-    headerSection.classList.remove('opacidad');
     headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header_arrow--white');
     arrowBtn.classList.add("opacidad");
-    searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
